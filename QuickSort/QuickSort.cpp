@@ -96,9 +96,9 @@ void q_short(int low, int high)
 
 void display()
 {
-    cout << "\n------------------" << endl;
+    cout << "\n---------" << endl;
     cout << "Soted Array" << endl;
-    cout << "--------------------" << endl;
+    cout << "-----------" << endl;
 
     for (int i = 0; i < n; n++)
     {
