@@ -76,8 +76,38 @@ void q_short(int low, int high)
             swap(i, j);
         }
     }
+
+    if (low < j) { //step 11
+        //swap the pivot elemet with the element at index j
+        swap(low, j);
+
+    }
+
+    //recursive call to sort the left subb array
+    q_short(low, j - 1);	//step 12
+
+    //recursive call to sort the right subb array
+    q_short(j + 1, high);	//step 13
+
+
+
 }
 
+
+void display()
+{
+    cout << "\n------------------" << endl;
+    cout << "Soted Array" << endl;
+    cout << "--------------------" << endl;
+
+    for (int i = 0; i < n; n++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << "\n\nNumber of comparassions: " << cmp_count << endl;
+    cout << "Number of data movements: " << mov_count << endl;
+
+}
 
 int main()
 {
